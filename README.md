@@ -1,6 +1,8 @@
-[![Release](https://img.shields.io/npm/v/stylelint-lsp.svg)](https://www.npmjs.com/package/stylelint-lsp)
-[![Build Status](https://github.com/bmatcuk/stylelint-lsp/actions/workflows/test.yml/badge.svg)](https://github.com/bmatcuk/stylelint-lsp/actions)
-[![codecov.io](https://img.shields.io/codecov/c/github/bmatcuk/stylelint-lsp.svg?branch=master)](https://codecov.io/github/bmatcuk/stylelint-lsp?branch=master)
+> **Fork of [bmatcuk/stylelint-lsp](https://github.com/bmatcuk/stylelint-lsp)** - original author: Bob Matcuk
+
+[![Release](https://img.shields.io/npm/v/@gepbird/stylelint-lsp.svg)](https://www.npmjs.com/package/@gepbird/stylelint-lsp)
+[![Build Status](https://github.com/gepbird/stylelint-lsp/actions/workflows/test.yml/badge.svg)](https://github.com/gepbird/stylelint-lsp/actions)
+[![codecov.io](https://img.shields.io/codecov/c/github/gepbird/stylelint-lsp.svg?branch=master)](https://codecov.io/github/gepbird/stylelint-lsp?branch=master)
 
 # stylelint-lsp
 stylelint-lsp is an implementation of the [Language Server Protocol] for

@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-lsp",
+  "name": "@gepbird/stylelint-lsp",
   "version": "2.0.1",
   "description": "A stylelint language server",
   "keywords": [
@@ -10,9 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bmatcuk/stylelint-lsp"
+    "url": "https://github.com/gepbird/stylelint-lsp"
   },
-  "author": "Bob Matcuk <bmatcuk@gmail.com> (https://squeg.net)",
+  "author": "Gutyina Gergő <gutyina.gergo.2@gmail.com>",
+  "contributors": [
+    "Bob Matcuk <bmatcuk@gmail.com> (https://squeg.net) - original author"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
