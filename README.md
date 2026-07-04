@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/npm/v/@gepbird/stylelint-lsp.svg)](https://www.npmjs.com/package/@gepbird/stylelint-lsp)
 [![Build Status](https://github.com/gepbird/stylelint-lsp/actions/workflows/test.yml/badge.svg)](https://github.com/gepbird/stylelint-lsp/actions)
-[![codecov.io](https://img.shields.io/codecov/c/github/gepbird/stylelint-lsp.svg?branch=master)](https://codecov.io/github/gepbird/stylelint-lsp?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/gepbird/stylelint-lsp.svg?branch=main)](https://codecov.io/github/gepbird/stylelint-lsp?branch=main)
 
 # stylelint-lsp
 stylelint-lsp is an implementation of the [Language Server Protocol] for
