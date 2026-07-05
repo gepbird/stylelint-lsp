@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "prepare": "run-s clean build && husky install",
     "test": "jest --coverage",
@@ -51,7 +51,6 @@
     "lint-staged": "~15.1.0",
     "npm-run-all": "~4.1.5",
     "prettier": "~3.1.0",
-    "rimraf": "~5.0.5",
     "ts-jest": "~29.1.1",
     "typescript": "~5.8.3"
   },
