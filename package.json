@@ -30,7 +30,7 @@
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "prepare": "pnpm clean && pnpm build && husky install",
+    "prepare": "pnpm clean && pnpm build && husky",
     "test": "jest --coverage",
     "watch": "tsc -w -p tsconfig.build.json"
   },
@@ -46,7 +46,7 @@
     "eslint-plugin-jest": "~27.6.0",
     "eslint-plugin-prettier": "~5.0.1",
     "eslint_d": "~13.1.0",
-    "husky": "^8.0.0",
+    "husky": "^9.1.7",
     "jest": "~29.7.0",
     "lint-staged": "~15.1.0",
     "prettier": "~3.1.0",
