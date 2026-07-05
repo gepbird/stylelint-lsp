@@ -46,10 +46,11 @@ function lint(
     codeFilename = parsedUri.fsPath
   }
 
-  // Since we don't care about the "output", we give stylelint a noop
+  // Since we don't care about the formatted report, we give stylelint a noop
   // formatter to save some processing time. This is especially useful when fix
   // = true because the formatter runs, but then the output is replaced by the
-  // fixed CSS, completely wasting the formatter's time.
+  // fixed CSS (which we access via `code`), completely wasting the formatter's
+  // time.
   return settings.lint({
     code,
     codeFilename,
@@ -111,10 +112,10 @@ export async function autoFix(
 ): Promise<TextEdit[]> {
   const originalText = document.getText()
   const {
-    output,
+    code: fixedCode,
     results: [result],
   } = await lint(document.uri, originalText, settings, true)
-  if (!result || result.ignored || output === "") {
+  if (!result || result.ignored || !fixedCode) {
     return []
   }
 
@@ -122,7 +123,7 @@ export async function autoFix(
   const changes: Change[] = []
   let lastChange: Change | undefined = undefined
   let cur = 0
-  fastDiff(originalText, output).forEach(([action, str]) => {
+  fastDiff(originalText, fixedCode).forEach(([action, str]) => {
     if (action === fastDiff.EQUAL) {
       cur += str.length
     } else if (action === fastDiff.DELETE) {

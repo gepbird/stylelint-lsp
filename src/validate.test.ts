@@ -66,7 +66,7 @@ describe("autoFix", () => {
   test("no changes", async () => {
     asMock(stylelint.lint).mockReturnValueOnce(
       Promise.resolve({
-        output: "...",
+        code: "...",
         results: [{}],
       })
     )
@@ -79,7 +79,7 @@ describe("autoFix", () => {
   test("with changes", async () => {
     asMock(stylelint.lint).mockReturnValueOnce(
       Promise.resolve({
-        output: "...",
+        code: "...",
         results: [{}],
       })
     )
