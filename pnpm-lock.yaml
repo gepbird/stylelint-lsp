@@ -17,9 +17,6 @@ importers:
       stylelint:
         specifier: ~15.11.0
         version: 15.11.0(typescript@5.8.3)
-      tslib:
-        specifier: ~2.6.2
-        version: 2.6.2
       vscode-languageserver:
         specifier: ~9.0.1
         version: 9.0.1
