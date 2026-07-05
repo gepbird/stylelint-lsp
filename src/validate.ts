@@ -13,7 +13,7 @@ import { TextDocument } from "vscode-languageserver-textdocument"
 import { URI } from "vscode-uri"
 import fastDiff from "fast-diff"
 import { LinterResult, LinterOptions } from "stylelint"
-import path from "path"
+import path from "node:path"
 
 import BufferedMessageQueue from "./buffered-message-queue"
 import Settings, { ServerSettings } from "./settings"

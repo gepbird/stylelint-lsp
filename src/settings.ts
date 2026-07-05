@@ -9,7 +9,7 @@ import { TextDocument } from "vscode-languageserver-textdocument"
 import { URI } from "vscode-uri"
 import globalStylelint, { LinterOptions, LinterResult } from "stylelint"
 import resolveFrom from "resolve-from"
-import path from "path"
+import path from "node:path"
 
 /** Default ClientSettings */
 export const defaultClientSettings = {
