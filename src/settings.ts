@@ -156,6 +156,7 @@ export default class Settings {
         cwd: "",
         errored: true,
         output: "",
+        report: "",
         results: [],
         reportedDisables: [],
         ruleMetadata: {},
