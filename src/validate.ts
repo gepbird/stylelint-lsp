@@ -15,8 +15,8 @@ import fastDiff from "fast-diff"
 import { LinterResult, LinterOptions } from "stylelint"
 import path from "node:path"
 
-import BufferedMessageQueue from "./buffered-message-queue"
-import Settings, { ServerSettings } from "./settings"
+import BufferedMessageQueue from "./buffered-message-queue.js"
+import Settings, { ServerSettings } from "./settings.js"
 
 const STYLELINT_CONFIG_FILES = [
   ".stylelintignore",

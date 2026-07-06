@@ -5,7 +5,7 @@ import {
 import { TextDocument } from "vscode-languageserver-textdocument"
 import resolveFrom from "resolve-from"
 
-import Settings, { defaultClientSettings } from "./settings"
+import Settings, { defaultClientSettings } from "./settings.js"
 
 const connection = createConnection()
 const settings = new Settings(connection)

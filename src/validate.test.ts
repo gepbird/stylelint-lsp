@@ -13,10 +13,10 @@ import {
   validateAll,
   validateDocument,
   validateNotification,
-} from "./validate"
-import { ServerSettings, defaultClientSettings } from "./settings"
+} from "./validate.js"
+import { ServerSettings, defaultClientSettings } from "./settings.js"
 const { default: BufferedMessageQueue } = jest.createMockFromModule<
-  typeof import("./buffered-message-queue")
+  typeof import("./buffered-message-queue.js")
 >("./buffered-message-queue")
 
 const defaultServerSettings: ServerSettings = {

@@ -16,10 +16,14 @@ import {
 } from "vscode-languageserver/node"
 import { TextDocument } from "vscode-languageserver-textdocument"
 
-import { CommandIds, CommandTitles, DisableRuleCommandIds } from "./constants"
-import BufferedMessageQueue from "buffered-message-queue"
-import { autoFix, validateDocument } from "./validate"
-import Settings from "./settings"
+import {
+  CommandIds,
+  CommandTitles,
+  DisableRuleCommandIds,
+} from "./constants.js"
+import BufferedMessageQueue from "./buffered-message-queue.js"
+import { autoFix, validateDocument } from "./validate.js"
+import Settings from "./settings.js"
 
 /** Disable-rule commands when operating on a single line */
 export const DISABLE_RULES_FOR_LINE: DisableRuleCommandIds[] = [

@@ -9,11 +9,11 @@ import {
 } from "vscode-languageserver/node"
 import { TextDocument } from "vscode-languageserver-textdocument"
 
-import Settings from "./settings"
-import { CommandIds, DisableRuleCommandIds } from "./constants"
-import { registerCommandHandlers } from "./commands"
-import BufferedMessageQueue from "./buffered-message-queue"
-import { registerValidateHandlers, validateAll } from "./validate"
+import Settings from "./settings.js"
+import { CommandIds, DisableRuleCommandIds } from "./constants.js"
+import { registerCommandHandlers } from "./commands.js"
+import BufferedMessageQueue from "./buffered-message-queue.js"
+import { registerValidateHandlers, validateAll } from "./validate.js"
 
 const connection = createConnection()
 const documents = new TextDocuments<TextDocument>(TextDocument)

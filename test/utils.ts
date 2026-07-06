@@ -1,5 +1,5 @@
 export function getSupportedCodeActionLiteralsMock(
-  settings: import("../src/settings").default
+  settings: import("../src/settings.js").default
 ): jest.Mock {
   const descriptor = Object.getOwnPropertyDescriptor(
     settings,

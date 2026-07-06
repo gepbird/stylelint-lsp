@@ -26,16 +26,16 @@ import {
   getIndent,
   shouldApplyToLine,
   shouldApplyToWholeFile,
-} from "./commands"
-import { DisableRuleCommandIds, CommandIds } from "./constants"
-import { getSupportedCodeActionLiteralsMock } from "../test/utils"
-import Settings from "./settings"
-import { autoFix, validateDocument } from "./validate"
+} from "./commands.js"
+import { DisableRuleCommandIds, CommandIds } from "./constants.js"
+import { getSupportedCodeActionLiteralsMock } from "../test/utils.js"
+import Settings from "./settings.js"
+import { autoFix, validateDocument } from "./validate.js"
 const { default: BufferedMessageQueue } = jest.createMockFromModule<
-  typeof import("./buffered-message-queue")
+  typeof import("./buffered-message-queue.js")
 >("./buffered-message-queue")
-jest.mock("./settings")
-jest.mock("./validate")
+jest.mock("./settings.js")
+jest.mock("./validate.js")
 
 describe("getIdent", () => {
   const code = "var monkey = 'bagel'"

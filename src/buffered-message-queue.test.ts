@@ -12,7 +12,7 @@ import BufferedMessageQueue, {
   isRequest,
   Request,
   Notification,
-} from "./buffered-message-queue"
+} from "./buffered-message-queue.js"
 
 const testRequest = new RequestType<void, void, Error>("test")
 const testNotification = new NotificationType<void>("test")
