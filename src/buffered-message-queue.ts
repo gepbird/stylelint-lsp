@@ -77,7 +77,6 @@ export type Message<TParam, TReturn> =
  * @param param The param to a Request or Notification handler
  * @returns the document version
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type VersionLens<TParam> = (
   param: TParam
 ) => VersionedTextDocumentIdentifier["version"]
@@ -101,7 +100,6 @@ export type NotificationHandlerMap = Map<
   string,
   {
     /** The handler for the Notification */
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     handler: GenericNotificationHandler
 
     /** The VersionLens for the Notification */
