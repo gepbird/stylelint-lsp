@@ -117,8 +117,8 @@ export default class Settings {
 
     const promise = this.connection.workspace
       .getConfiguration({ scopeUri: uri, section: "" })
-      .then((settings: { stylelintplus: ClientSettings }) => {
-        const stylelint = this.resolveStylelint(uri)
+      .then(async (settings: { stylelintplus: ClientSettings }) => {
+        const stylelint = await this.resolveStylelint(uri)
         return {
           ...defaultClientSettings,
           ...settings.stylelintplus,
@@ -169,7 +169,9 @@ export default class Settings {
    * @param uri The document uri
    * @returns an instance of stylelint
    */
-  private resolveStylelint(uri: TextDocument["uri"]): typeof globalStylelint {
+  private async resolveStylelint(
+    uri: TextDocument["uri"]
+  ): Promise<typeof globalStylelint> {
     let stylelint = globalStylelint
     const parsedUri = URI.parse(uri)
     if (parsedUri.scheme === "file") {
@@ -181,7 +183,8 @@ export default class Settings {
           stylelint = maybeStylelint
         } else {
           this.connection.tracer.log(`stylelint found at ${stylelintPath}`)
-          stylelint = require(stylelintPath)
+          const mod = await import(stylelintPath)
+          stylelint = (mod.default ?? mod) as typeof globalStylelint
           this.pathToStylelint.set(stylelintPath, stylelint)
         }
       }
