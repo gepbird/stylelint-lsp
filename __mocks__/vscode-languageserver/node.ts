@@ -1,6 +1,6 @@
-const vscodeLanguageServer = jest.requireActual("vscode-languageserver")
+export * from "vscode-languageserver/node"
 
-const createConnection = jest
+export const createConnection = jest
   .fn(() => ({
     onCodeAction: jest.fn().mockName("Connection.onCodeAction"),
     onRequest: jest.fn().mockName("Connection.onRequest"),
@@ -29,7 +29,7 @@ const defaultTextDocument: import("vscode-languageserver-textdocument").TextDocu
     lineCount: 10,
   }
 
-const TextDocuments = jest
+export const TextDocuments = jest
   .fn(() => ({
     get: jest
       .fn()
@@ -37,14 +37,3 @@ const TextDocuments = jest
       .mockReturnValue(defaultTextDocument),
   }))
   .mockName("TextDocuments")
-
-module.exports = new Proxy(vscodeLanguageServer, {
-  get(target, prop, receiver) {
-    if (prop === "createConnection") {
-      return createConnection
-    } else if (prop === "TextDocuments") {
-      return TextDocuments
-    }
-    return Reflect.get(target, prop, receiver)
-  },
-})
