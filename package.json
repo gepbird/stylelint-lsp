@@ -17,7 +17,7 @@
     "Bob Matcuk <bmatcuk@gmail.com> (https://squeg.net) - original author"
   ],
   "license": "MIT",
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@11.10.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
