@@ -5,12 +5,6 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": [
       "ts-jest",
-      {
-        tsconfig: {
-          module: "CommonJS",
-          moduleResolution: "node",
-        },
-      },
     ],
   },
   moduleNameMapper: {
