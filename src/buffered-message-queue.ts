@@ -144,7 +144,7 @@ export default class BufferedMessageQueue {
     versionLens: VersionLens<TParam>
   ): void {
     // register a handler with the underlying connection
-    this.connection.onRequest(type, (param, token) => {
+    this.connection.onRequest(type, ((param, token) => {
       return new Promise<TReturn>((resolve, reject) => {
         // enqueue the Request
         this.queue.push({
@@ -159,7 +159,7 @@ export default class BufferedMessageQueue {
         // process the message if the queue is idle
         this.next()
       })
-    })
+    }) as RequestHandler<TParam, TReturn, TError>)
 
     // register the handler/VersionLens
     this.requestHandlers.set(type.method, {
