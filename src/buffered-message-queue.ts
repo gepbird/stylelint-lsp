@@ -68,8 +68,7 @@ export interface Notification<TParam> {
 
 /** A queued Message is either a Request or a Notification */
 export type Message<TParam, TReturn> =
-  | Request<TParam, TReturn>
-  | Notification<TParam>
+  Request<TParam, TReturn> | Notification<TParam>
 
 /**
  * Given the param to a Request or Notification handler, determine the document
