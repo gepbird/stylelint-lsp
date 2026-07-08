@@ -27,8 +27,8 @@ importers:
         specifier: ~1.0.12
         version: 1.0.12
       vscode-uri:
-        specifier: ~3.0.8
-        version: 3.0.8
+        specifier: ~3.1.0
+        version: 3.1.0
     devDependencies:
       '@eslint/js':
         specifier: ~10.0.1
@@ -2402,8 +2402,8 @@ packages:
     resolution: {integrity: sha512-9gEWpXkYGXoqG7pBnE8O8hx/yP7+Aabn4+peQ3KDicQv6qunHSWyLTud3OF0w4S2+HfDD+5HqYKiXQW9HAU6mA==}
     hasBin: true
 
-  vscode-uri@3.0.8:
-    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
+  vscode-uri@3.1.0:
+    resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
@@ -5202,7 +5202,7 @@ snapshots:
     dependencies:
       vscode-languageserver-protocol: 3.18.2
 
-  vscode-uri@3.0.8: {}
+  vscode-uri@3.1.0: {}
 
   walker@1.0.8:
     dependencies:
