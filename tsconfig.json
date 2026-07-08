@@ -4,6 +4,7 @@
     "moduleResolution": "Bundler",
     "outDir": "dist",
     "target": "es2022",
+    "types": ["node", "jest"],
 
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
